@@ -47,6 +47,7 @@
                             <textarea class="form-control" id="message"></textarea>
                             <br/>
                             <input type="submit" class="btn btn-primary" value="Send Message" />
+                               <input id="clearMessages" type="button" class="btn btn-danger pull-right" value="Clear Messages" />
                         </div>
                     </form>
                 </div>
@@ -93,7 +94,11 @@
                     html += '<li class="list-group-item">'+data[i]+'</li>';
                 }
                 $users.html(html);
-            })
+            });
+
+            $('#clearMessages').on('click',function(){
+                $chat.html('<div class="chat" id="chat"></div>')
+            });
 
         });
     </script>
