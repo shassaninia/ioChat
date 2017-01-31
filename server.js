@@ -10,7 +10,7 @@ users = [];
 
 connections = [];
 
-server.listen();
+server.listen(process.env.PORT || 3000);
 console.log('Server running...');
 
 // When the root director is requested, return the index.html page.
